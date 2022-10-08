@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Form4</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/3564/3564995.png" alt="logotype">
+        <nav class="nav">
+            <ul>
+                <li>Home</li>
+                <li>Shop</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Media</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <article class="article">
+            <h1 class="article-h">Sign up to yourcustomtailor.com</h1>
+        </article>
+
+        <main class="main">
+            <h2>Step 4/4 - Payment</h2>
+            <h6>Progress</h6>
+            <div class="progress">
+                <div class="progress-bar page-four">
+                </div>
+            </div>
+            <p>
+                Please fill in your payment data
+            </p>
+        </main>
+
+        <form action="#" method="get">
+
+            <div class="card">
+
+                <div class="name-card">
+                    <label class="input-label" for="name-on-card">Name on card</label>
+                    <input type="text" id="name-on-card" name="name-on-card" required>
+                    <label class="input-label" for="card-type">Card type</label>
+                    <input type="text" id="card-type" name="card-type" required placeholder="Visa/Mastercard">
+                </div>
+
+                <div class="credit-num">
+                    <label class="input-label" for="card-number">Credit card number</label>
+                    <input type="text" pattern="[0-9]*" maxlength="16" minlength="16" id="card-number"
+                        name="card-number" required>
+                    <label class="input-label" for="first-name">First name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+
+                <div class="expiry-credit">
+                    <label class="input-label " for="expiry-month">Expiry month</label>
+                    <input type="tel" class="expiry-date" pattern="[0-9]{2}" id="expiry-month" name="expiry-month"
+                        maxlength="2" minlength="2" required>
+                    <label class="input-label " for="expiry-year">Expiry year</label>
+                    <input type="tel" class="expiry-date" pattern="[0-9]{4}" id="expiry-year" name="expiry-year"
+                        maxlength="4" minlength="4" required>
+                </div>
+
+                <div class="ccv">
+                    <label class="input-label" for="ccv">CCV</label>
+                    <input type="tel" pattern="[0-9]{3}" id="ccv" name="ccv" maxlength="3" minlength="3" required>
+                </div>
+
+            </div>
+
+            <div class="d-sub-btn">
+                <button class="sub-btn" type="submit">Finish</button>
+            </div>
+
+        </form>
+
+        <div class="d-next-page">
+            <button class="btn-next-page" type="submit" onClick='location.href="./index.html"'>Home</button>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

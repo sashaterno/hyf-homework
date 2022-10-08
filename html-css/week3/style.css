@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    background-color: #d3edff;
+}
+
+.container {
+    width: 85%;
+    height: 100%;
+    margin: 0.125rem auto;
+}
+
+.header {
+    padding: 1.25rem 1rem;
+    background-color: #2facff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 16px -16px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    margin-right: 0.75rem;
+}
+
+.logo:hover {
+    color: #ffffff;
+    opacity: 0.7;
+    transform: rotate(-7deg);
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav ul li {
+    list-style-type: none;
+    margin: 0 1.5rem;
+    text-transform: uppercase;
+    font-weight: 450;
+    cursor: pointer;
+}
+
+.nav ul li:hover {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.article {
+    margin-top: 2rem;
+}
+
+.article-h,
+.article-p:not(:last-of-type) {
+    margin-bottom: 1.4rem;
+}
+
+.article-h {
+    font-size: 2rem;
+}
+
+.article-p {
+    font-size: 1.1rem;
+}
+
+.main {
+    margin-top: 2rem;
+}
+
+.main h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1.4rem;
+}
+
+.main h6 {
+    font-weight: 550;
+    margin-bottom: 0.8rem;
+}
+
+.main p {
+    margin-top: 1.4rem;
+}
+
+.progress {
+    overflow: hidden;
+    width: 50%;
+    height: 2rem;
+    border: 0.063rem solid;
+    border-radius: 3.125rem;
+}
+
+.page-one,
+.page-two,
+.page-three,
+.page-four {
+    height: 100%;
+    background-color: #2facff;
+    animation: page-one 2s forwards;
+}
+
+@keyframes page-one {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 25%;
+    }
+}
+
+.page-two {
+    animation: page-two 2s forwards;
+}
+
+@keyframes page-two {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+.page-three {
+    animation: page-three 2s forwards;
+}
+
+@keyframes page-three {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+.page-four {
+    animation: page-four 2s forwards;
+}
+
+@keyframes page-four {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.input-name,
+.input-address,
+.input-country,
+.input-contact,
+.week-news,
+.items-input,
+.style-items,
+.name-card,
+.credit-num,
+.expiry-credit,
+.ccv {
+    font-size: 1.4rem;
+    font-weight: 550;
+}
+
+.input-name {
+    margin: 2rem 0;
+}
+
+.input-name input,
+.input-address input {
+    margin-right: 1.5rem;
+}
+
+.input-address {
+    margin: 2rem 0;
+}
+
+.input-country select {
+    font-size: 1rem;
+    font-weight: 350;
+    font-style: italic;
+}
+
+.area-descrip {
+    width: 20%;
+}
+
+.input-text textarea {
+    width: 80%;
+}
+
+.input-text {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.area-descrip h5 {
+    font-weight: 550;
+    margin-bottom: 1rem;
+}
+
+.area-descrip p {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.input-checkbox p {
+    margin-bottom: 2rem;
+}
+
+.label-checkbox {
+    font-weight: 550;
+}
+
+.checkbox {
+    height: 1.1rem;
+    width: 1.1rem;
+}
+
+.d-sub-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.sub-btn {
+    width: 9rem;
+    height: 5rem;
+    background-color: #2facff;
+    font-weight: 550;
+}
+
+.d-next-page {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.btn-next-page {
+    width: 7rem;
+    height: 3.5rem;
+    background-color: #2facff;
+    font-weight: 550;
+}
+
+button:hover {
+    color: #2facff;
+    background-color: #fff;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    cursor: pointer;
+}
+
+.input-contact {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.contact,
+.phone {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.contact input:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+.contact label,
+.phone label {
+    margin-bottom: 0.5rem;
+}
+
+.week-news {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.week-news input {
+    margin: 0 3rem 0 0.7rem;
+}
+
+.offer-checkbox {
+    margin: 2rem 0;
+    display: flex;
+}
+
+.items-input input {
+    margin: 0 5rem 0 1rem;
+}
+
+.input-img img {
+    width: 10rem;
+}
+
+.input-img img:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.img-styles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5rem;
+    row-gap: 3rem;
+    margin: 2rem 0;
+}
+
+.style-items {
+    margin-top: 1rem;
+}
+
+.card {
+    margin: 2rem 0;
+}
+
+.name-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 26%;
+}
+
+.name-card input {
+    margin-bottom: 1.5rem;
+}
+
+.name-card label {
+    margin-bottom: 0.5rem;
+}
+
+.credit-num,
+.expiry-credit {
+    margin-bottom: 1.5rem;
+}
+
+.credit-num input {
+    margin: 0 3.5rem 0 1rem;
+    width: 15%;
+}
+
+.expiry-credit input {
+    margin: 0 1.5rem 0 0.5rem;
+    width: 5%
+}
+
+.ccv input {
+    width: 5%;
+    margin-left: 0.5rem;
+}
+
+@media screen and (min-device-width: 600px) and (max-width: 749px) {
+
+    .input-name {
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-country {
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-address {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-contact {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .phone {
+        margin-left: 3rem;
+    }
+
+    .offer-checkbox {
+        flex-direction: column;
+    }
+
+    .img-styles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        row-gap: 3rem;
+        margin: 2rem 0;
+    }
+
+    .credit-num {
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 599px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 1.2rem;
+    }
+
+    .nav ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .nav ul li {
+        margin-bottom: 1.2rem;
+    }
+
+    .container {
+        width: 97%;
+    }
+
+    * {
+        font-size: 0.9rem;
+    }
+
+    .input-name {
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-country {
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-address {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-contact {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .phone {
+        margin-left: 3rem;
+    }
+
+    .offer-checkbox {
+        flex-direction: column;
+    }
+
+    .img-styles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        row-gap: 3rem;
+        margin: 2rem 0;
+    }
+
+    .credit-num {
+        display: flex;
+    }
+
+}

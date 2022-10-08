@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Form2</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/3564/3564995.png" alt="logotype">
+        <nav class="nav">
+            <ul>
+                <li>Home</li>
+                <li>Shop</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Media</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <article class="article">
+            <h1 class="article-h">Sign up to yourcustomtailor.com</h1>
+        </article>
+
+        <main class="main">
+            <h2>Step 2/4 - how can we reach you?</h2>
+            <h6>Progress</h6>
+            <div class="progress">
+                <div class="progress-bar page-two">
+                </div>
+            </div>
+            <p>
+                We will probably need to stay in touch somehow. Let is know how we can
+                reach you?
+            </p>
+        </main>
+
+        <form action="./index3.html">
+
+            <div class="input-contact">
+                <div class="contact">
+                    <label class="input-label" for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                    <label class="input-label" for="password">Password*</label>
+                    <input type="password" id="password" name="password" required>
+                    <label class="input-label" for="re-password">Re-enter Password*</label>
+                    <input type="password" id="re-password" name="re-password" required>
+                </div>
+                <div class="phone">
+                    <label class="input-label" for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone" maxlength="11" minlength="8">
+                </div>
+            </div>
+
+            <div class="news-radio">
+                <div class="news-p">
+                    <p>
+                        I want to sign up for the newsletter
+                    </p>
+                </div>
+                <div class="week-news">
+                    <label class="input-label" for="radio-one">Weekly news</label>
+                    <input type="radio" id="radio-one" name="radio-one" required>
+                    <label class="input-label" for="radio-two">Monthly news</label>
+                    <input type="radio" id="radio-two" name="radio-one" required>
+                    <label class="input-label" for="radio-three">Don't send me news</label>
+                    <input type="radio" id="radio-three" name="radio-one" required>
+                </div>
+            </div>
+
+            <div class="d-sub-btn">
+                <button class="sub-btn" type="submit">Next step</button>
+            </div>
+
+        </form>
+
+        <div class="d-next-page">
+            <button class="btn-next-page" type="submit" onClick='location.href="./index3.html"'>Next page</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

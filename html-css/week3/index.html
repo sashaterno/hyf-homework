@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/3564/3564995.png" alt="logotype">
+        <nav class="nav">
+            <ul>
+                <li>Home</li>
+                <li>Shop</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Media</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <article class="article">
+            <h1 class="article-h">Sign up to yourcustomtailor.com</h1>
+            <p class="article-p">We can't wait to help you improve your life-style and gain the attention from people
+                around
+                you!</p>
+            <p class="article-p">Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are
+                busy
+                picking the best offers that match your preferences and style. Every week we will send you a hand-picked
+                selection - we just need to know a few details about
+                your first...</p>
+        </article>
+
+        <main class="main">
+            <h2>Step 1/4 - tell us who you are?</h2>
+            <h6>Progress</h6>
+            <div class="progress">
+                <div class="progress-bar page-one">
+                </div>
+            </div>
+            <p>
+                Nice to meet you. Let's spend a minute to get to know each other? Please enter the following:
+            </p>
+        </main>
+
+        <form action="./index2.html">
+
+            <div class="input-name">
+                <label class="input-label" for="f-name">First name*</label>
+                <input type="text" id="f-name" name="f-name" required>
+                <label class="input-label" for="l-name">Last name*</label>
+                <input type="text" id="l-name" name="l-name" required>
+            </div>
+
+            <div class="input-country">
+                <label class="input-label" for="country">Country*</label>
+                <select class="input-country" id="country" name="country" required>
+                    <option>choose</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="Poland">Poland</option>
+                </select>
+            </div>
+
+            <div class="input-address">
+                <label class="input-label" for="st-address">Street address*</label>
+                <input type="text" id="st-address" name="st-address" required>
+                <label class="input-label" for="post-code">Post code*</label>
+                <input type="text" id="post-code" name="post-code" maxlength="4" minlength="4" required>
+            </div>
+
+            <div class="input-text">
+                <div class="area-descrip">
+                    <h5>Profile description</h5>
+                    <p>Please provide a short description of ourself to be displayed on
+                        our social community pages.</p>
+                </div>
+                <textarea id="input-area" name="input-area" rows="4" cols="50"></textarea>
+            </div>
+
+            <div class="input-checkbox">
+                <p>Use the same address for billing and shipping? Uncheck below to fill
+                    out a separate shipping address.</p>
+                <label class="label-checkbox" for="shipping-address">Shipping address</label>
+                <input class="checkbox" type="checkbox" id="shipping-address" name="shipping-address" checked>
+            </div>
+
+            <div class="d-sub-btn">
+                <button class="sub-btn" type="submit">Next step</button>
+            </div>
+
+        </form>
+
+        <div class="d-next-page">
+            <button class="btn-next-page" type="submit" onClick='location.href="./index2.html"'>Next page</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
