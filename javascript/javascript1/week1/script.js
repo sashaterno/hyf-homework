@@ -54,3 +54,13 @@ if (houseRealPriceJulia < houseCostJulia) {
 } else {
     console.log("This house cost too little!")
 };
+
+
+
+// Ez Namey (Startup name generator)
+
+let firstWords = ["Corporate", "Awesome", "Extraordinary", "Phenomenal", "Rare", "Sensational", "Spectacular", "Amazing", "Majestic", "Grand"];
+let secondWords = ["Chilly", "Arctic", "Coldish", "Hot", "Superior", "Wonderful", "Excellent", "Glorious", "Superb", "Groovy"];
+const randomNumber = Math.floor(Math.random() * 10);
+let startupName = firstWords[randomNumber] + " " + secondWords[randomNumber];
+console.log("The startup: " + "\"" + startupName + "\"" + " contains " + startupName.length + " characters");
