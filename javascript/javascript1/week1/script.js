@@ -1,19 +1,19 @@
 // Age-ify (A future age calculator)
 
-const YEAR_OF_BIRTH = 2002;
-let yearFuture = 2045;
-let age = yearFuture - YEAR_OF_BIRTH;
+const yearOfBirth = 2002;
+const yearFuture = 2045;
+const age = yearFuture - yearOfBirth;
 console.log("You will be " + age + " years old in " + yearFuture);
 
 
 
 // Goodboy-Oldboy (A dog age calculator)
 
-const DOG_YEAR_OF_BIRTH = 2015;
-let dogYearFuture = 2027;
-let humanYear = dogYearFuture - DOG_YEAR_OF_BIRTH;
-let dogYear = humanYear * 7;
-let shouldShowResultInDogYears = true;
+const dogYearOfBirth = 2015;
+const dogYearFuture = 2027;
+const humanYear = dogYearFuture - dogYearOfBirth;
+const dogYear = humanYear * 7;
+const shouldShowResultInDogYears = true;
 
 if (shouldShowResultInDogYears) {
     console.log("Your dog will be " + dogYear + " dog years old in " + dogYearFuture)
