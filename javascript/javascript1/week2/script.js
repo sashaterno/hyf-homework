@@ -83,3 +83,36 @@ const clothesWhenCold = getWhatToWear(11);
 console.log(clothesWhenHot);
 console.log(clothesWhenOk);
 console.log(clothesWhenCold);
+
+
+// Student manager
+
+const class07Students = [];
+function addStudentToClass(studentName) {
+    if (class07Students.length >= 6 && studentName !== "Queen") {
+        return "Cannot add more students to class 07";
+    } else if (class07Students.includes(studentName)) {
+        return `Student ${studentName} is already in the class`;
+    } else if (studentName === "") {
+        return "You cannot add an empty string to a class";
+    } else {
+        class07Students.push(studentName);
+    }
+}
+
+function getNumberOfStudents() {
+    return `${class07Students.length} students in a class now`;
+}
+
+addStudentToClass("");
+addStudentToClass("Peter");
+addStudentToClass("Steve");
+addStudentToClass("John");
+addStudentToClass("Ruby");
+addStudentToClass("Chris");
+addStudentToClass("John");
+addStudentToClass("Barry");
+addStudentToClass("Lorenzo");
+addStudentToClass("Queen");
+
+getNumberOfStudents();
