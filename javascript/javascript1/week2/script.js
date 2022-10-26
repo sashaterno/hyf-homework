@@ -49,3 +49,16 @@ function getFullname(firstname, surname, useFormalName, woman) {
 const fullnameForWomen = getFullname("Chris", "Rayner", true, true);
 
 console.log(fullnameForWomen);
+
+
+// Event application
+
+function getEventWeekday(days) {
+    const eventDay = new Date();
+    eventDay.setDate(days + eventDay.getDate());
+    return `Today is ${new Date().toLocaleDateString("locale", { weekday: "long" })} and the event is in ${days} days. Therefore the event will be held on a ${eventDay.toLocaleDateString("locale", { weekday: "long" })}.`;
+}
+
+const result = getEventWeekday(2);
+
+console.log(result);
