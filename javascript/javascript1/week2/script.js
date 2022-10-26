@@ -62,3 +62,24 @@ function getEventWeekday(days) {
 const result = getEventWeekday(2);
 
 console.log(result);
+
+
+// Weather wear
+
+function getWhatToWear(temperature) {
+    if (temperature >= 23) {
+        return "t-shirt and shorts"
+    } else if (temperature < 23 && temperature >= 15) {
+        return "zip hoodie and jeans"
+    } else {
+        return "jacket and pants"
+    }
+}
+
+const clothesWhenHot = getWhatToWear(25);
+const clothesWhenOk = getWhatToWear(17);
+const clothesWhenCold = getWhatToWear(11);
+
+console.log(clothesWhenHot);
+console.log(clothesWhenOk);
+console.log(clothesWhenCold);
