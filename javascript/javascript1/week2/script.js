@@ -150,3 +150,22 @@ addCandy("toffee", 10);
 addCandy("chewingGum", 25);
 
 canBuyMoreCandy();
+
+
+// Full name
+
+function getFullname(firstname, surname, useFormalName, woman) {
+    if (useFormalName) {
+        if (woman) {
+            return "Misses " + firstname + ' ' + surname;
+        } else {
+            return "Lord " + firstname + ' ' + surname;
+        }
+    } else {
+        return firstname + ' ' + surname;
+    }
+}
+
+const fullName = getFullname("Robert", "Davidson", true, false);
+
+console.log(fullName);
