@@ -90,18 +90,18 @@ console.log(clothesWhenCold);
 const class07Students = [];
 function addStudentToClass(studentName) {
     if (class07Students.length >= 6 && studentName !== "Queen") {
-        return "Cannot add more students to class 07";
+        console.log("Cannot add more students to class 07");
     } else if (class07Students.includes(studentName)) {
-        return `Student ${studentName} is already in the class`;
+        console.log(`Student ${studentName} is already in the class`);
     } else if (studentName === "") {
-        return "You cannot add an empty string to a class";
+        console.log("You cannot add an empty string to a class");
     } else {
         class07Students.push(studentName);
     }
 }
 
 function getNumberOfStudents() {
-    return `${class07Students.length} students in a class now`;
+    console.log(`${class07Students.length} students in a class now`);
 }
 
 addStudentToClass("");
