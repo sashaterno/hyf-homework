@@ -169,3 +169,25 @@ function getFullname(firstname, surname, useFormalName, woman) {
 const fullName = getFullname("Robert", "Davidson", true, false);
 
 console.log(fullName);
+
+
+// Weather wear switch case version
+
+function getWhatToWear(temperature) {
+    switch (true) {
+        case temperature >= 23:
+            return "t-shirt and shorts";
+        case temperature < 23 && temperature >= 15:
+            return "zip hoodie and jeans";
+        default:
+            return "jacket and pants";
+    }
+}
+
+const clothesWhenWarm = getWhatToWear(26);
+const clothesWhenNormal = getWhatToWear(15);
+const clothesWhenIcy = getWhatToWear(9);
+
+console.log(clothesWhenWarm);
+console.log(clothesWhenNormal);
+console.log(clothesWhenIcy);
