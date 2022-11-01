@@ -79,3 +79,62 @@ function logOutSeriesText() {
 }
 
 logOutSeriesText();
+
+
+// NOnoN0nOYes (Note taking app)
+
+const notes = [];
+
+function saveNote(content, id) {
+    let obj = {
+        content: content,
+        id: id
+    }
+    notes.push(obj);
+}
+
+saveNote("Pick up groceries", 1);
+saveNote("Do laundry", 2);
+
+console.log(notes);
+
+
+function getNote(id) {
+    for (let element of notes) {
+        if (element.id === id) {
+            return element;
+        }
+    }
+    return "Error!";
+}
+
+const firstNote = getNote(1);
+const secondNote = getNote(2);
+
+console.log(firstNote);
+console.log(secondNote);
+
+
+function logOutNotesFormatted() {
+    for (let element of notes) {
+        console.log(`The note with id: ${element.id}, has the following note text: "${element.content}".`);
+    }
+}
+
+logOutNotesFormatted();
+
+
+function getNoteByKeyword(keyword) { // Note search by keywords
+    for (let element of notes) {
+        if (element.content.includes(keyword)) {
+            return element;
+        }
+    }
+    return "Error!"
+}
+
+const noteWithUp = getNoteByKeyword("up");
+const noteWithDo = getNoteByKeyword("Do");
+
+console.log(noteWithUp);
+console.log(noteWithDo);
