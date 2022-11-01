@@ -20,3 +20,18 @@ for (let i = 0; i < names.length; i++) {
 }
 
 console.log(names);
+
+
+// When will we be there
+
+function getTravelTime(speed, distance) {
+    const time = distance / speed;
+    const hours = Math.floor(time);
+    const minutes = Math.round((time - hours) * 60);
+
+    return `${hours} hours and ${minutes} minutes`
+}
+
+const travelTime = getTravelTime(60, 425);
+
+console.log(travelTime);
