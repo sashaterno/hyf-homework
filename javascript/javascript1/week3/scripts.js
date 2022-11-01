@@ -138,3 +138,56 @@ const noteWithDo = getNoteByKeyword("Do");
 
 console.log(noteWithUp);
 console.log(noteWithDo);
+
+
+// CactusIO-interactive (Smart phone usage app)
+
+const activities = [];
+
+const usageLimit = 60;
+
+const date = new Date();
+
+function addActivity(date, activity, duration) {
+    let obj = {
+        date: date,
+        activity: activity,
+        duration: duration
+    }
+    activities.push(obj);
+}
+
+addActivity(date, "Netflix", 40);
+addActivity(date, "TikTok", 15);
+
+
+function showStatus() {
+    let activitiesTime = 0;
+
+    for (let element of activities) {
+        activitiesTime += element.duration;
+    }
+
+    if (activities.length === 0) {
+        console.log("Add some activities before calling showStatus");
+    } else if (activitiesTime >= usageLimit) {
+        console.log(`You have reached your limit (${usageLimit}min), no more smartphoning for you!`);
+    } else {
+        console.log(`You have added ${activities.length} activities. They amount to ${activitiesTime} min of usage`);
+    }
+}
+
+showStatus();
+
+addActivity(date, "Snapchat", 5);
+
+showStatus();
+
+
+function showTimeIn() { // Time in each activity
+    for (let element of activities) {
+        console.log(`Time in ${element.activity}: ${element.duration} minutes!`);
+    }
+}
+
+showTimeIn();
