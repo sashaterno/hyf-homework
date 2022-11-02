@@ -8,7 +8,7 @@ const names = [
     "Rasmus",
     "Samuel",
     "katrine",
-    "Tala",
+    "Tala"
 ];
 
 const nameToRemove = "Ahmad";
@@ -44,20 +44,20 @@ const seriesDurations = [
         title: "Witcher",
         days: 0,
         hours: 16,
-        minutes: 0,
+        minutes: 0
     },
     {
         title: "Sherlock",
         days: 0,
         hours: 18,
-        minutes: 0,
+        minutes: 0
     },
     {
         title: "Vikings",
         days: 2,
         hours: 17,
-        minutes: 16,
-    },
+        minutes: 16
+    }
 ];
 
 function logOutSeriesText() {
