@@ -34,3 +34,31 @@ function countLetters(str) {
 }
 
 countLetters(danishString2);
+
+
+// Spirit animal name generator
+
+const spiritAnimal = ["Orchid Mantis", "The crying butterfly", "The fullmoon wolf", "Bernese Mountain Dog", "Blue-Footed Booby", "Bouvier des Flandres", "Capuchin Monkey", "Clouded Leopard", "Copperhead Snake", "Dromedary Camel"];
+
+const page = document.querySelector('body');
+
+const input = document.createElement('input');
+const button = document.createElement('button');
+button.innerText = 'Generate';
+
+button.addEventListener('click', function () {
+    const username = input.value;
+    if (username === '') {
+        const newP = document.createElement('p');
+        newP.textContent = "What is your name?";
+        page.appendChild(newP);
+    } else {
+        const random = spiritAnimal[Math.floor(Math.random() * spiritAnimal.length)];
+        const p = document.createElement('p');
+        p.textContent = `${username} your spirit animal - ${random}!`;
+        page.appendChild(p);
+    }
+})
+
+page.appendChild(input);
+page.appendChild(button);
