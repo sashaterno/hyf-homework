@@ -40,7 +40,7 @@ countLetters(danishString2);
 
 const spiritAnimal = ["Orchid Mantis", "The crying butterfly", "The fullmoon wolf", "Bernese Mountain Dog", "Blue-Footed Booby", "Bouvier des Flandres", "Capuchin Monkey", "Clouded Leopard", "Copperhead Snake", "Dromedary Camel"];
 
-const page = document.querySelector('body');
+const page = document.querySelector('.page');
 
 const input = document.createElement('input');
 const button = document.createElement('button');
