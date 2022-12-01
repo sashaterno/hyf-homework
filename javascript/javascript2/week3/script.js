@@ -71,3 +71,31 @@ function logFunnyJoke() { console.log('funny joke') }
 function logBadJoke() { console.log('bad joke') }
 
 jokeCreator(true, logFunnyJoke, logBadJoke);
+
+
+// Function as a variable
+
+const funcArr = [
+    function firstEl() { return 'First element' },
+    function secondEl() { return 'Second element' },
+    function thirdEl() { return 'Third element' }
+];
+
+funcArr.forEach(x => console.log(x()));
+
+function declaration() {
+    console.log('Function declarations load before any code is executed');
+}
+
+const expression = function () {
+    console.log('Function expressions load only when the interpreter reaches that line of code');
+}
+
+declaration();
+expression();
+
+const funcObj = {
+    firstKey: function firstFunc() { console.log('First function in object') }
+}
+
+funcObj.firstKey();
