@@ -1,0 +1,49 @@
+CREATE DATABASE if not exists delivery;
+
+USE delivery;
+
+CREATE TABLE
+    service (
+        service_id INT PRIMARY KEY AUTO_INCREMENT,
+        service_name VARCHAR(30) NOT NULL,
+        price DECIMAL NOT NULL,
+        `description` VARCHAR(50)
+    ) ENGINE = INNODB DEFAULT CHARSET = UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
+
+CREATE TABLE
+    customer (
+        customer_id INT PRIMARY KEY AUTO_INCREMENT,
+        name VARCHAR(50) NOT NULL,
+        phone VARCHAR(20) NOT NULL,
+        email VARCHAR(30) NOT NULL,
+        address VARCHAR(50) NOT NULL
+    ) ENGINE = INNODB DEFAULT CHARSET = UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
+
+CREATE TABLE
+    shipping (
+        shipping_id INT AUTO_INCREMENT,
+        order_id INT UNIQUE NOT NULL,
+        duration DATETIME,
+        express_id INT UNIQUE NOT NULL,
+        PRIMARY KEY (shipping_id, express_id),
+        CONSTRAINT `order_id` FOREIGN KEY (order_id) REFERENCES ORDER (order_id) ON DELETE CASCADE ON UPDATE CASCADE
+    ) ENGINE = INNODB DEFAULT CHARSET = UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
+
+CREATE TABLE
+    express (
+        express_id INT PRIMARY KEY AUTO_INCREMENT,
+        name VARCHAR(40) NOT NULL,
+        phone VARCHAR(20) NOT NULL,
+        shipping VARCHAR(10) NOT NULL,
+        CONSTRAINT `express_id` FOREIGN KEY (express_id) REFERENCES EXPRESS (express_id) ON DELETE CASCADE ON UPDATE CASCADE
+    ) ENGINE = INNODB DEFAULT CHARSET = UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
+
+CREATE TABLE
+    order (
+        order_id INT PRIMARY KEY AUTO_INCREMENT,
+        service_id INT NOT NULL,
+        customer_id INT NOT NULL,
+        order_due DATETIME NOT NULL,
+        CONSTRAINT `service_id` FOREIGN KEY (service_id) REFERENCES SERVICE (service_id) ON DELETE CASCADE ON UPDATE CASCADE,
+        CONSTRAINT `customer_id` FOREIGN KEY (customer_id) REFERENCES CUSTOMER (customer_id) ON DELETE CASCADE ON UPDATE CASCADE
+    ) ENGINE = INNODB DEFAULT CHARSET = UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
